@@ -37,12 +37,13 @@
         />
         </div>
         <br />
-        <button type="submit" class="submit-btn">Create Itinerary</button>
+        <button type="submit" class="submit-btn" onclick="loading()">Create Itinerary</button>
+        <div id="loading"></div>
   </form>
   </section>
   
   
-  <section class="section-2">
+  <section class="section-2 active">
       
       {%if result%}
      <p> {{result}}</p> 
@@ -55,7 +56,7 @@
     <p class="footer-content">
         <a href="">Image 1</a>
         <a href="">Image 2</a>
-         <a href="">Image 3</a>
+        <a href="">Image 3</a>
     </p>
   </div>
 
