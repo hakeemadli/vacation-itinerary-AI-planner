@@ -20,7 +20,7 @@ section{
     place-items: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
 }
 
@@ -32,23 +32,25 @@ section{
 
     width: 500px;
     height:30px;
-    max-width: 90%;
     margin: 10px;
     border: none;
     border-radius: 13px;
-    text-align: center;
     box-shadow: 100px;
+    text-indent: 10%;
     font-weight: bold;
 }
 
 .section-2{
     overflow-y: scroll;
-    padding-bottom: 100px;
-    padding-left: 30px;
+
+    scroll-padding-top: 100px;
+    padding: 0px 30px 50px 30px ;
 
     /* hide overflow scrollbar*/
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    display: none;
 }
 
 .section-2::-webkit-scrollbar{
@@ -60,15 +62,19 @@ section{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45px;
+    height: 40px;
     background-color: darkgoldenrod;
 }
 
-a{
+.footer-content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    place-content: center;
+    font-size: 15px;
+    word-spacing: 10px;
+    column-gap: 30px;
+    
 }
-
 
 /* text formatting*/
 
