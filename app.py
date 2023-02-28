@@ -1,6 +1,8 @@
 from flask import request
 import openai
 
+
+
 def text_completion():
     
      # fecthing input prompt on web-form
@@ -34,4 +36,22 @@ def text_completion():
 
     
     return result
+
+def textfile_separator():
     
+    output = text_completion()
+    output_formatted = str(output.replace('Day', '++Day'))
+
+    split_output = output_formatted.split('++')
+
+    for i in split_output:
+        split_days = i.split('\n\n')
+        
+        for j in split_days:
+            result = j    
+            
+    return result
+     
+            
+                
+        
