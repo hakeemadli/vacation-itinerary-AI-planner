@@ -1,10 +1,13 @@
 import openai
 import os
-from auth_key import auth_key
+from dotenv import load_dotenv
 
+load_dotenv()
+
+auth_key = os.getenv('auth_api_key')
 openai.api_key= auth_key
 
-with open('flask-app/prompt.txt', 'r') as f:
+with open('static/prompt.txt', 'r') as f:
     prompt = f.read()
 
 # input prompt
@@ -24,17 +27,30 @@ def text_completion():
     completion = openai.Completion.create(
         engine=model_engine,
         prompt=compiled_prompt,
-        max_tokens=256,
+        max_tokens=500,
         temperature=0.5,
         top_p=1,
-        n = 3,
         frequency_penalty=0,
         presence_penalty=0, 
         stop = ['\#']
     )
     
-    result = print(completion.choices[0].text)
+    result = completion.choices[0].text
     return result
 
 
-text_completion()
+def textfile_separator():
+    
+    output = text_completion()
+    output_formatted = str(output.replace('Day', '++Day'))
+
+    split_output = output_formatted.split('++')
+
+    for i in split_output:
+        split_days = i.split('\n\n')
+        
+        for i in split_days:
+            print(i)
+        
+    
+textfile_separator()

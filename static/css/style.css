@@ -8,7 +8,7 @@
 
 body{
 
-    background-color: beige;
+    background-color: rgb(237, 241, 214);
     margin: 0;
     padding: 0;
 
@@ -22,27 +22,42 @@ section{
     text-align: center;
     min-height: 100vh;
     scroll-snap-align: start;
+
 }
 
 .containers{
     scroll-snap-type: y;
 }
 
+form{
+
+    background-color: rgb(157, 192, 139);
+    height: 380px;
+    width: 580px;
+    border-radius: 50px;
+    max-width: 90%;
+    
+
+}
+
 .form-control{
 
-    width: 500px;
+    width: 450px;
     height:30px;
     margin: 10px;
     border: none;
-    border-radius: 13px;
-    box-shadow: 100px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.479);
     text-indent: 10%;
     font-weight: bold;
 }
 
 .section-2{
-    overflow-y: scroll;
 
+    background-color: rgb(157, 192, 139) ;
+    overflow-y: scroll;
+    width: 600px;
+    align-self: center;
     scroll-padding-top: 100px;
     padding: 0px 30px 50px 30px ;
 
@@ -50,7 +65,7 @@ section{
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    display: none;
+    /*display: none;*/
 }
 
 .section-2::-webkit-scrollbar{
@@ -63,7 +78,7 @@ section{
     left: 0;
     width: 100%;
     height: 40px;
-    background-color: darkgoldenrod;
+    background-color: rgb(96, 153, 102);
 }
 
 .footer-content{
@@ -87,13 +102,18 @@ p{
     white-space: pre-line;
 }
 
+em{
+    color: rgb(96, 153, 102);
+}
 /* styling and animate */
 
 .submit-btn{
     
-    background-color: rgba(255, 208, 0, 0.795);
+    background-color: rgb(96, 153, 102);
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
+    padding-left:30px;
+    padding-right: 30px;
     height: 50px;
     width: 150 px;
     color: black;
@@ -102,7 +122,7 @@ p{
 }
 
 .submit-btn:hover{
-    background-color: beige;
+    background-color: rgba(245, 245, 220, 0);
     border-style: solid;
     border-color: black;
     border-width: 2px;

@@ -37,7 +37,7 @@ def text_completion():
     
     return result
 
-def textfile_separator():
+def text_separator():
     
     output = text_completion()
     output_formatted = str(output.replace('Day', '++Day'))

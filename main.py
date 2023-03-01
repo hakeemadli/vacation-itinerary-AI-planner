@@ -1,7 +1,12 @@
-from flask import Flask, render_template, request,redirect,url_for
+from flask import Flask, render_template, request, redirect, url_for
 import openai
+import os
 from app import text_completion
-from auth_key import auth_key
+from dotenv import load_dotenv
+
+load_dotenv()
+
+auth_key = os.getenv('auth_api_key')
 
 app = Flask(__name__)
 
@@ -11,15 +16,15 @@ openai.api_key= auth_key
 @app.route('/', methods=['POST', 'GET'])
 
 def home():
-    result=''
+    result= []
     if request.method =='POST'and 'days' in request.form and 'destination' in request.form:
         
-        result = text_completion()
         
+        result = text_completion()
+
+         
     return render_template('index.html', result = result)
    
    
 if __name__ == '__main__':
     app.run(debug=True)
-    
-    
