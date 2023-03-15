@@ -54,12 +54,12 @@ form{
 
 .section-2{
 
-    background-color: rgb(157, 192, 139) ;
-    overflow-y: scroll;
-    width: 600px;
-    align-self: center;
+    /*background-color: rgb(157, 192, 139) ;*/
+    overflow-y: scroll;   
     scroll-padding-top: 100px;
-    padding: 0px 30px 50px 30px ;
+    max-width: 90%;
+    padding-top: 50px;
+    /*padding: 0px 30px 50px 30px ;*/
 
     /* hide overflow scrollbar*/
     -ms-overflow-style: none;
