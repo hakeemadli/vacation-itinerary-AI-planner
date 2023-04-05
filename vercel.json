@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "main.py",
+        "src": "./main.py",
         "use": "@vercel/python"
       }
     ],
@@ -10,11 +10,11 @@
       {
         "src": "/(.*)",
         "methods": ["POST", "GET"],
-        "dest": "/"
+        "dest": "./main.py"
       }
     ],
     "env": {
-      "auth_api_key": "$auth_api_key"
+      "auth_api_key": "@auth_api_key"
     }
   }
 
