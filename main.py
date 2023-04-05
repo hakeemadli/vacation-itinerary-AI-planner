@@ -5,13 +5,12 @@ from app import text_completion
 from dotenv import load_dotenv
 
 load_dotenv()
-
-auth_key = os.getenv('auth_api_key')
+ 
 
 app = Flask(__name__)
 
 # Set API key in auth_key
-openai.api_key= auth_key
+openai.api_key= os.getenv('auth_api_key')
 
 @app.route('/', methods=['POST', 'GET'])
 
