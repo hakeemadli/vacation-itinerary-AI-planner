@@ -14,7 +14,7 @@
       }
     ],
     "env": {
-      "auth_api_key": "$auth_api_key"
+      "auth_api_key": "@AUTH_API_KEY"
     }
   }
 
