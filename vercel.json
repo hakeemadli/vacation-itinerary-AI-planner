@@ -12,11 +12,9 @@
         "methods": ["POST", "GET"],
         "dest": "main.py"
       }
-    ],
-    "env": {
-      "auth_api_key": "@AUTH_API_KEY"
-    }
-  }
+
+    ]
+}
 
   
   
