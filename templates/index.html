@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="{{url_for('static',filename = 'css/style.css')}}"
     />
-    <script src="{{url_for('static', filename='js/app.js')}}"></script>
 </head>
 
 <body>
@@ -37,13 +36,13 @@
         />
         </div>
         <br />
-        <button type="submit" class="submit-btn" onclick="loading()">Create Itinerary</button>
+        <button type="submit" class="submit-btn" id="btn" onclick="loading()">Create Itinerary</button>
         <div id="loading"></div>
   </form>
   </section>
   
   
-  <section class="section-2 active">
+  <section class="section-2" id="result">
       
       {%if result%}
         <p> {{result|safe}}</p> 
@@ -59,6 +58,8 @@
         <a href="">Image 3</a>
     </p>
   </div>
+
+  <script></script>
 
 </body>
 </html>
