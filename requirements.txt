@@ -1,5 +1,4 @@
 openai
-spacy
 flask
 flask_assets
 python-dotenv
