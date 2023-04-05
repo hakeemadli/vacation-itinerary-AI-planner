@@ -8,13 +8,13 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/",
         "methods": ["POST", "GET"],
         "dest": "main.py"
       }
     ],
     "env": {
-      "auth_api_key": "$auth_api_key"
+      "auth_api_key": "@auth_key"
     }
   }
 
