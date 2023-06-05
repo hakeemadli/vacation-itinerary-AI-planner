@@ -15,14 +15,28 @@ openai.api_key= os.getenv('auth_api_key')
 @app.route('/', methods=['POST', 'GET'])
 
 def home():
-    result= []
+   
     if request.method =='POST'and 'days' in request.form and 'destination' in request.form:
         
         
-        result = text_completion()
+        
 
          
-    return render_template('index.html', result = result)
+    return render_template('index.html')
+
+@app.route('/result', methods=['GET'])
+
+ result= []
+def completion():
+    
+    result = text_completion()
+    return (result)
+    
+    
+
+
+    
+
    
    
 if __name__ == '__main__':

@@ -25,7 +25,8 @@ def text_completion():
         temperature=0.5,
         top_p=1,
         frequency_penalty=0,
-        presence_penalty=0, 
+        presence_penalty=0,
+        #stream = True, 
         stop = ['\#']
     )
     
@@ -36,22 +37,5 @@ def text_completion():
 
     
     return result
-
-def text_separator():
-    
-    output = text_completion()
-    output_formatted = str(output.replace('Day', '++Day'))
-
-    split_output = output_formatted.split('++')
-
-    for i in split_output:
-        split_days = i.split('\n\n')
-        
-        for j in split_days:
-            result = j    
             
-    return result
-     
-            
-                
         
