@@ -2,3 +2,4 @@ openai
 flask
 flask_assets
 python-dotenv
+flask-caching

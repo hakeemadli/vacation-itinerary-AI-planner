@@ -14,7 +14,7 @@
 <body>
     <div class="containers">
     <section class="section-1">
-    <form action="/" method="POST">
+    <form action="/result" method="POST">
         <h3> Vacation-GPT<span class="spin-icon">&#127759</span></h3>
         <div class="input-group">
         <input
@@ -53,13 +53,19 @@
 
   <div class="footer">
     <p class="footer-content">
-        <a href="">Image 1</a>
-        <a href="">Image 2</a>
-        <a href="">Image 3</a>
+        <a href="/">Image 1</a>
+        <a href="/">Image 2</a>
+        <a href="/">Image 3</a>
     </p>
   </div>
 
-  <script></script>
+  <script>
+    var source = new EventSource("/result");
+    source.onmessage = function(event){
+      document.getElementById("result").innerHTML += event.data;
+    };
+
+  </script>
 
 </body>
 </html>
