@@ -26,7 +26,6 @@ def text_completion():
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0,
-        #stream = True, 
         stop = ['\#']
     )
     
@@ -37,5 +36,6 @@ def text_completion():
 
     
     return result
+
             
         
